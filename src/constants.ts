@@ -377,3 +377,9 @@ export const suggestedUsersToFollow = [
 
 // Messages separated by more than this will not be grouped in the same thread
 export const threadLenghtInMs = 900;
+
+export const floatingPoints: Record<string,number> = {
+  sats: 0,
+  USD: 2,
+  _: 2,
+};

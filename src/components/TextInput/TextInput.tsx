@@ -19,6 +19,9 @@ const TextInput: Component<{
   autocomplete?: string,
   name?: string,
   noExtraSpace?: boolean,
+  inputClass?: string,
+  descriptionClass?: string,
+  errorClass?: string,
 }> = (props) => {
 
   return (
@@ -38,7 +41,7 @@ const TextInput: Component<{
         <div class={styles.inputWrapper}>
           <TextField.Input
             ref={props.ref}
-            class={styles.input}
+            class={`${styles.input} ${props.inputClass || ''}`}
             readOnly={props.readonly}
             type={props.type || 'search'}
             name={props.name || 'searchTerm'}
@@ -53,12 +56,12 @@ const TextInput: Component<{
         </div>
 
         <Show when={props.description}>
-          <TextField.Description class={styles.description}>
+          <TextField.Description class={`${styles.description} ${props.descriptionClass || ''}`}>
             {props.description}
           </TextField.Description>
         </Show>
 
-        <TextField.ErrorMessage class={styles.errorMessage}>
+        <TextField.ErrorMessage class={`${styles.errorMessage} ${props.errorClass || ''}`}>
           {props.errorMessage}
         </TextField.ErrorMessage>
       </TextField.Root>

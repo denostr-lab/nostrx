@@ -84,7 +84,7 @@ const NavMenu: Component< { id?: string } > = (props) => {
           }
         </For>
       </nav>
-      <Show when={account?.hasPublicKey() && !loc.pathname.startsWith('/messages/')}>
+      <Show when={account?.hasPublicKey() && !loc.pathname.startsWith('/messages') && !loc.pathname.startsWith('/premium')}>
         <div class={styles.callToAction}>
           <Show
             when={isBigScreen()}

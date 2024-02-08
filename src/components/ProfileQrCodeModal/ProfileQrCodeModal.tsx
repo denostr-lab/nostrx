@@ -116,7 +116,7 @@ const ProfileQrCodeModal: Component<{
                   </div>
                   <div class={styles.value}>
                     <ButtonCopy
-                      light={true}
+                      color="light"
                       copyValue={info.data}
                       labelBeforeIcon={true}
                       label={truncateNpub(info.data)}
