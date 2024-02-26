@@ -1,8 +1,8 @@
 import QRCodeStyling from 'qr-code-styling';
 import { Component, createEffect, onMount } from 'solid-js';
 
-import primalLogoFire from '../../assets/icons/logo_fire.svg'
-import primalLogoIce from '../../assets/icons/logo_ice.svg'
+import primalLogoFire from '../../assets/icons/logo_fire.png'
+import primalLogoIce from '../../assets/icons/logo_ice.png'
 import { useSettingsContext } from '../../contexts/SettingsContext';
 
 import styles from './QrCode.module.scss';

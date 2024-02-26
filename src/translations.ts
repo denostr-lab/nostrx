@@ -445,7 +445,7 @@ export const actions = {
 
 export const branding = {
   id: 'branding',
-  defaultMessage: 'Primal',
+  defaultMessage: 'NostrX',
   description: 'Brand name',
 };
 

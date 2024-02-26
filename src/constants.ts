@@ -1,6 +1,6 @@
 import { ContentModeration, FeedPage, } from "./types/primal";
-import logoFire from './assets/icons/logo_fire.svg';
-import logoIce from './assets/icons/logo_ice.svg';
+import logoFire from './assets/icons/logo_fire.png';
+import logoIce from './assets/icons/logo_ice.png';
 
 export const second = 1000;
 export const minute = 60 * second;

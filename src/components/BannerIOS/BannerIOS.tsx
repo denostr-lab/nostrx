@@ -7,7 +7,7 @@ import { hookForDev } from '../../lib/devTools';
 import { useSearchParams } from '@solidjs/router';
 
 export const isIOS = () => {
-  return /(iPad|iPhone|iPod)/.test(navigator.userAgent);
+  return false;
 };
 
 const BannerIOS: Component< { id?: string } > = (props) => {

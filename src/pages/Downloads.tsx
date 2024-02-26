@@ -66,7 +66,7 @@ const Downloads: Component = () => {
         <Search />
       </Wormhole>
 
-      <StickySidebar>
+      {/* <StickySidebar>
         <div class={styles.downloadsSidebar}>
 
           <div class={styles.title}>
@@ -109,19 +109,20 @@ const Downloads: Component = () => {
             />
           </div>
         </div>
-      </StickySidebar>
+      </StickySidebar> */}
 
       <PageTitle title={intl.formatMessage(t.title)} />
 
       <PageCaption title={intl.formatMessage(t.title)} />
 
       <div class={styles.downloadsContent}>
+        {"Coming soon. Seriously. Downloads is on the way. ;)"}
 
-        <div class={styles.promoHolder}>
+        {/* <div class={styles.promoHolder}>
           <img src={primalDownloads} />
-        </div>
+        </div> */}
 
-        <div class={styles.linkHolder}>
+        {/* <div class={styles.linkHolder}>
           <div class={styles.appStore}>
             <div class={styles.desktopCTA}>{intl.formatMessage(t.callToActionIOSTitle)}</div>
 
@@ -175,10 +176,10 @@ const Downloads: Component = () => {
               {intl.formatMessage(t.getApk)}
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div class={styles.downloadsExtra}>
+      {/* <div class={styles.downloadsExtra}>
 
         <div class={styles.title}>
           {intl.formatMessage(t.links.title)}
@@ -219,7 +220,7 @@ const Downloads: Component = () => {
             href='https://github.com/PrimalHQ/primal-server'
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
