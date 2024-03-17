@@ -6,6 +6,7 @@ import styles from './BannerIOS.module.scss';
 import { hookForDev } from '../../lib/devTools';
 
 export const isIOS = () => {
+  // return /(iPad|iPhone|iPod)/.test(navigator.userAgent);
   return false;
 };
 

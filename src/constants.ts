@@ -302,13 +302,13 @@ export const today = (new Date()).getTime();
 // iOS
 export const iosRD = (new Date('12/19/2023')).getTime();
 export const iosVersion = '1.1.10';
-export const appStoreLink = 'https://apps.apple.com/us/app/primal/id1673134518';
+export const appStoreLink = 'https://apps.apple.com/cn/app/revo-short-videos-in-web-3-0/id1540064252';
 
 // Android
 export const andRD = (new Date('02/02/2024')).getTime();
 export const andVersion = '0.91.2';
-export const playstoreLink = 'https://play.google.com/store/apps/details?id=net.primal.android';
-export const apkLink = `https://github.com/PrimalHQ/primal-android-app/releases/tag/${andVersion}`;
+export const playstoreLink = 'https://play.google.com/store/apps/details?id=co.goduck.revo-app';
+export const apkLink = `https://github.com/denostr-lab/nostrx-app/releases/tag/${andVersion}`;
 
 // ----------------------------------------
 

@@ -1,14 +1,22 @@
 import { Component, onCleanup, onMount, Show } from 'solid-js';
+import { A } from '@solidjs/router';
+import Avatar from '../Avatar/Avatar';
 
 import styles from './HomeHeaderPhone.module.scss';
 import FeedSelect from '../FeedSelect/FeedSelect';
 import Branding from '../Branding/Branding';
+import { useAccountContext } from '../../contexts/AccountContext';
 import { useHomeContext } from '../../contexts/HomeContext';
+import { useIntl } from '@cookbook/solid-intl';
+import { placeholders as t, actions as tActions } from '../../translations';
 import { hookForDev } from '../../lib/devTools';
+import ButtonPrimary from '../Buttons/ButtonPrimary';
 
 const HomeHeaderPhone: Component< { id?: string } > = (props) => {
 
+  const account = useAccountContext();
   const home = useHomeContext();
+  const intl = useIntl();
 
   let lastScrollTop = document.body.scrollTop || document.documentElement.scrollTop;
   let smallHeader: HTMLDivElement | undefined;
@@ -58,12 +66,36 @@ const HomeHeaderPhone: Component< { id?: string } > = (props) => {
     window.removeEventListener('scroll', onScroll);
   });
 
+  const activeUser = () => account?.activeUser;
+
   return (
     <div id={props.id} class={styles.fullHeader} ref={smallHeader}>
       <div class={styles.phoneHeader}>
         <div class={styles.logo}>
           <Branding small={true} />
         </div>
+        <Show
+          when={account?.hasPublicKey()}
+          fallback={
+            <Show when={account?.isKeyLookupDone}>
+              <div class={styles.welcomeMessageSmall}>
+                <ButtonPrimary onClick={account?.actions.showGetStarted}>
+                  {intl.formatMessage(tActions.getStarted)}
+                </ButtonPrimary>
+              </div>
+            </Show>
+          }
+        >
+          <div class={styles.userProfile}>
+            <A href="/profile" class={styles.avatar}>
+              <Avatar
+                size="vvs"
+                user={activeUser()}
+                showCheck={false}
+              />
+            </A>
+          </div>
+        </Show>
         <Show when={home?.selectedFeed}>
           <FeedSelect isPhone={true} />
         </Show>

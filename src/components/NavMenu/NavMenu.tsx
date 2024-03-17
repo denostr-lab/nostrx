@@ -50,12 +50,12 @@ const NavMenu: Component< { id?: string } > = (props) => {
       label: intl.formatMessage(t.downloads),
       icon: 'downloadIcon',
       bubble: () => notifications?.downloadsCount || 0,
+      hiddenOnSmallScreens: true,
     },
     {
       to: '/settings',
       label: intl.formatMessage(t.settings),
       icon: 'settingsIcon',
-      hiddenOnSmallScreens: true,
       bubble: () => account?.sec ? 1 : 0,
     },
     {

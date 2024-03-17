@@ -64,7 +64,7 @@ const Downloads: Component = () => {
         <Search />
       </Wormhole>
 
-      {/* <StickySidebar>
+      <StickySidebar>
         <div class={styles.downloadsSidebar}>
 
           <div class={styles.title}>
@@ -75,52 +75,51 @@ const Downloads: Component = () => {
               darkIcon={gitHubLight}
               lightIcon={gitHubDark}
               label={intl.formatMessage(t.links.webApp)}
-              href='https://github.com/PrimalHQ/primal-web-app'
+              href='https://github.com/denostr-lab/nostrx-web-app'
             />
 
             <ExternalLink
               darkIcon={gitHubLight}
               lightIcon={gitHubDark}
               label={intl.formatMessage(t.links.iosApp)}
-              href='https://github.com/PrimalHQ/primal-ios-app'
+              href='https://github.com/denostr-lab/nostrx-app'
             />
 
-            <ExternalLink
+            {/* <ExternalLink
               darkIcon={gitHubLight}
               lightIcon={gitHubDark}
               label={intl.formatMessage(t.links.andApp)}
-              href='https://github.com/PrimalHQ/primal-android-app'
-            />
+              href='https://github.com/denostr-lab/nostrx-android-app'
+            /> */}
 
-            <ExternalLink
+            {/* <ExternalLink
               darkIcon={gitHubLight}
               lightIcon={gitHubDark}
               label={intl.formatMessage(t.links.cachingService)}
               href='https://github.com/PrimalHQ/primal-caching-service'
-            />
+            /> */}
 
-            <ExternalLink
+            {/* <ExternalLink
               darkIcon={gitHubLight}
               lightIcon={gitHubDark}
               label={intl.formatMessage(t.links.primalServer)}
               href='https://github.com/PrimalHQ/primal-server'
-            />
+            /> */}
           </div>
         </div>
-      </StickySidebar> */}
+      </StickySidebar>
 
       <PageTitle title={intl.formatMessage(t.title)} />
 
       <PageCaption title={intl.formatMessage(t.title)} />
 
       <div class={styles.downloadsContent}>
-        {"Coming soon. Seriously. Downloads is on the way. ;)"}
 
-        {/* <div class={styles.promoHolder}>
+        <div class={styles.promoHolder}>
           <img src={primalDownloads} />
-        </div> */}
+        </div>
 
-        {/* <div class={styles.linkHolder}>
+        <div class={styles.linkHolder}>
           <div class={styles.appStore}>
             <div class={styles.desktopCTA}>{intl.formatMessage(t.callToActionIOSTitle)}</div>
 
@@ -167,17 +166,17 @@ const Downloads: Component = () => {
             </a>
 
             <a
-              href={`https://github.com/PrimalHQ/primal-android-app/releases/tag/${andVersion()}`}
+              href={`https://github.com/denostr-lab/nostrx-app/releases/tag/${andVersion()}`}
               target='_blank'
               class={styles.apkLink}
             >
               {intl.formatMessage(t.getApk)}
             </a>
           </div>
-        </div> */}
+        </div>
       </div>
 
-      {/* <div class={styles.downloadsExtra}>
+      <div class={styles.downloadsExtra}>
 
         <div class={styles.title}>
           {intl.formatMessage(t.links.title)}
@@ -187,38 +186,38 @@ const Downloads: Component = () => {
             darkIcon={gitHubLight}
             lightIcon={gitHubDark}
             label={intl.formatMessage(t.links.webApp)}
-            href='https://github.com/PrimalHQ/primal-web-app'
+            href='https://github.com/denostr-lab/nostrx-web-app'
           />
 
           <ExternalLink
             darkIcon={gitHubLight}
             lightIcon={gitHubDark}
             label={intl.formatMessage(t.links.iosApp)}
-            href='https://github.com/PrimalHQ/primal-ios-app'
+            href='https://github.com/denostr-lab/nostrx-app'
           />
 
-          <ExternalLink
+          {/* <ExternalLink
             darkIcon={gitHubLight}
             lightIcon={gitHubDark}
             label={intl.formatMessage(t.links.andApp)}
-            href='https://github.com/PrimalHQ/primal-android-app'
-          />
+            href='https://github.com/denostr-lab/nostrx-android-app'
+          /> */}
 
-          <ExternalLink
+          {/* <ExternalLink
             darkIcon={gitHubLight}
             lightIcon={gitHubDark}
             label={intl.formatMessage(t.links.cachingService)}
             href='https://github.com/PrimalHQ/primal-caching-service'
-          />
+          /> */}
 
-          <ExternalLink
+          {/* <ExternalLink
             darkIcon={gitHubLight}
             lightIcon={gitHubDark}
             label={intl.formatMessage(t.links.primalServer)}
             href='https://github.com/PrimalHQ/primal-server'
-          />
+          /> */}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
