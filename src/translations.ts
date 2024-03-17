@@ -472,7 +472,7 @@ export const downloads = {
   },
   callToActionIOSTitle: {
     id: 'downloads.ctaIOSTitle',
-    defaultMessage: 'Primal iOS',
+    defaultMessage: 'NostrX iOS',
     description: 'Title for the iOS downloads\' page call-to-action',
   },
   callToActionIOSDescription: {
@@ -482,7 +482,7 @@ export const downloads = {
   },
   callToActionAndroidTitle: {
     id: 'downloads.ctaAndroidTitle',
-    defaultMessage: 'Primal Android Beta',
+    defaultMessage: 'NostrX Android Beta',
     description: 'Title for the Android downloads\' page call-to-action',
   },
   callToActionAndroidDescription: {
@@ -513,17 +513,17 @@ export const downloads = {
     },
     webApp: {
       id: 'downloads.webAppLink',
-      defaultMessage: 'Primal Web App',
+      defaultMessage: 'NostrX Web App',
       description: 'Label for the link to the web app',
     },
     iosApp: {
       id: 'downloads.iosAppLink',
-      defaultMessage: 'Primal iOS App',
+      defaultMessage: 'NostrX iOS App',
       description: 'Label for the link to the iOS app',
     },
     andApp: {
       id: 'downloads.andAppLink',
-      defaultMessage: 'Primal Android App',
+      defaultMessage: 'NostrX Android App',
       description: 'Label for the link to the Android app',
     },
     cachingService: {
