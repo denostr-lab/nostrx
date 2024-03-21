@@ -106,7 +106,7 @@ const Router: Component = () => {
         <Route path="/privacy" component={Privacy} />
         <Route path="/support" component={Support} />
         <Route path="/" component={Layout} >
-          <Route path="/" component={Landing} />
+          <Route path="/" element={<Navigate href="/home" />} />
           <Route path="/home" component={Home} />
           <Route path="/thread/:postId" component={Thread} />
           <Route path="/e/:postId" component={Thread} />

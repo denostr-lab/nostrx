@@ -13,7 +13,7 @@ import { useHomeContext } from '../../contexts/HomeContext';
 import { SendNoteResult } from '../../types/primal';
 import { useProfileContext } from '../../contexts/ProfileContext';
 import Branding from '../Branding/Branding';
-import BannerIOS, { isIOS } from '../BannerIOS/BannerIOS';
+import BannerIOS, { isIOS, showBanner } from '../BannerIOS/BannerIOS';
 import ZapAnimation from '../ZapAnimation/ZapAnimation';
 import Landing from '../../pages/Landing';
 import ReactionsModal from '../ReactionsModal/ReactionsModal';
@@ -36,7 +36,7 @@ const Layout: Component = () => {
 
   const [queryParams, setQueryParams] = useSearchParams();
 
-  const showBanner = () => {
+  const showBanner_unused = () => {
     return queryParams.mobilebanner !== 'false';
   };
 

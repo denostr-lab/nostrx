@@ -21,7 +21,7 @@ import { userName } from '../stores/profile';
 import PageTitle from '../components/PageTitle/PageTitle';
 import NavHeader from '../components/NavHeader/NavHeader';
 import Loader from '../components/Loader/Loader';
-import { isIOS } from '../components/BannerIOS/BannerIOS';
+import { isIOS, showBanner } from '../components/BannerIOS/BannerIOS';
 
 
 const Thread: Component = () => {
@@ -127,7 +127,7 @@ const Thread: Component = () => {
       pn.scrollIntoView({ block });
 
       if (block === 'start') {
-        const moreScroll = threadHeader + (isIOS() ? iOSBanner : 0);
+        const moreScroll = threadHeader + (isIOS() && showBanner() ? iOSBanner : 0);
         window.scrollBy({ top: -moreScroll });
       }
     }, 100);

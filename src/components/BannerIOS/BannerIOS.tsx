@@ -7,14 +7,17 @@ import { hookForDev } from '../../lib/devTools';
 import { useSearchParams } from '@solidjs/router';
 
 export const isIOS = () => {
-  // return /(iPad|iPhone|iPod)/.test(navigator.userAgent);
+  return /(iPad|iPhone|iPod)/.test(navigator.userAgent);
+};
+
+export const showBanner = () => {
   return false;
 };
 
 const BannerIOS: Component< { id?: string } > = (props) => {
   const [queryParams, setQueryParams] = useSearchParams();
 
-  const showBanner = () => {
+  const showBanner_unused = () => {
     return queryParams.mobilebanner !== 'false';
   };
 
